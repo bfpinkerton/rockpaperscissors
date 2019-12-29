@@ -8,8 +8,58 @@
     <script>
         function computerPlay(){
             let computerChoice = Math.floor((Math.random())*3 + 1);
-            return computerChoice;
+            if(computerChoice == 1){
+                return "rock";
+            }
+            else if(computerChoice == 2){
+                return "paper";
+            }
+            else{
+                return "scissors";
+            }
         }
+
+        function playRound(playerSelection, computerSelection){
+            if(playerSelection == "rock"){
+                if(computerSelection == "scissors"){
+                    console.log("You won!");
+                }
+                else if(computerSelection == "rock"){
+                    console.log("It's a draw!");
+                }
+                else{
+                    console.log("You lost!");
+                }
+            }
+            else if(playerSelection == "scissors"){
+                if(computerSelection == "paper"){
+                    console.log("You won!");
+                }
+                else if(computerSelection == "scissors"){
+                    console.log("It's a draw!");
+                }
+                else{
+                    console.log("You lost!");
+                }
+            }
+            else{
+                if(computerSelection == "rock"){
+                    console.log("You won!");
+                }
+                else if(computerSelection == "paper"){
+                    console.log("It's a draw!");
+                }
+                else{
+                    console.log("You lost!")
+                }
+            }
+        }
+        function game(){
+            for(let x = 0; x < 5; x++){
+                playRound(window.prompt(), computerPlay());
+            }
+        }
+        game();
 
         console.log(computerPlay());
     </script>
