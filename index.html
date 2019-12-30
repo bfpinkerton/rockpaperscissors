@@ -3,65 +3,17 @@
 <HTML>
 <head>
     <title>Rock Paper Scissors!</title>
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <script>
-        function computerPlay(){
-            let computerChoice = Math.floor((Math.random())*3 + 1);
-            if(computerChoice == 1){
-                return "rock";
-            }
-            else if(computerChoice == 2){
-                return "paper";
-            }
-            else{
-                return "scissors";
-            }
-        }
+    <h1>JANKENPON</h1>
+    <img id = "rockpic" src = "http://i.imgur.com/xV2i6gP.png" alt = "rock pic">
+    <img id = "paperpic" src = "http://i.imgur.com/DVSr6wB.png" alt = "paper pic">
+    <img id = "scissorspic" src = "http://i.imgur.com/kBwbsWd.png" alt = "scissors pic">
+    <button id='rock'>Click me!</button>
+    <button id='paper'>Click me!</button>
+    <button id='scissors'>Click me!</button>
 
-        function playRound(playerSelection, computerSelection){
-            if(playerSelection == "rock"){
-                if(computerSelection == "scissors"){
-                    console.log("You won!");
-                }
-                else if(computerSelection == "rock"){
-                    console.log("It's a draw!");
-                }
-                else{
-                    console.log("You lost!");
-                }
-            }
-            else if(playerSelection == "scissors"){
-                if(computerSelection == "paper"){
-                    console.log("You won!");
-                }
-                else if(computerSelection == "scissors"){
-                    console.log("It's a draw!");
-                }
-                else{
-                    console.log("You lost!");
-                }
-            }
-            else{
-                if(computerSelection == "rock"){
-                    console.log("You won!");
-                }
-                else if(computerSelection == "paper"){
-                    console.log("It's a draw!");
-                }
-                else{
-                    console.log("You lost!")
-                }
-            }
-        }
-        function game(){
-            for(let x = 0; x < 5; x++){
-                playRound(window.prompt(), computerPlay());
-            }
-        }
-        game();
-
-        console.log(computerPlay());
-    </script>
+    <script src = 'main.js'></script>
 </body>
 </HTML>

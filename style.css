@@ -1,0 +1,17 @@
+#rockpic{
+    position: absolute;
+    left: 200px;
+    top: 500px;
+}
+
+#paperpic{
+    position: absolute;
+    left: 600px;
+    top: 500px;
+}
+
+#scissorspic{
+    position: absolute;
+    left: 1000px;
+    top:500px;
+}
